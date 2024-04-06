@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+        }
+
+        .modal__contact {
+            display: none;
+            position: absolute;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .contact {
+            width: 20%;
+            height: auto;
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+
+        }
+
+        .product-img {
+            width: 80%;
+            height: 250px;
+            margin-top: 10px ;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+
+        .name_contact {
+            color: #000;
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .money_contact {
+            color: red;
+            font-size: 20px;
+            font-family: 800;
+
+        }
+
+        .contact__money-name {
+            color: #000;
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 10px 0 ;
+        }
+
+        .contact__money-money {
+            text-align: center;
+            border-radius: 10px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            font-family: 800;
+            margin: 10px 0;
+            padding: 10px ;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contact">
+        <div class="product-img">
+            <img src="/QR__CODE.png" alt="" onmouseover="showProductInfo('Dell 7410', '10000', 'RAM 8GB SSD 512GB')"
+                onmousemove="updatePosition(event)" onmouseleave="hideProductInfo()">
+        </div>
+
+        <div class="contact__money">
+            <div class="contact__money-name">dell 7410</div>
+            <div class="contact__money-money">10000</div>
+        </div>
+        <div class="modal__contact">
+            <!-- Placeholder for product information -->
+        </div>
+    </div>
+    <div class="contact">
+        <div class="product-img">
+            <img src="/z4922076407629_15029fefa4475c2df2c74a92465f1be0.jpg" alt=""
+                onmouseover="showProductInfo('Dell 7400', '10012321300', 'RAM 8GB SSD 512GB')"
+                onmousemove="updatePosition(event)" onmouseleave="hideProductInfo()">
+        </div>
+
+        <div class="contact__money">
+            <div class="contact__money-name">dell 7410</div>
+            <div class="contact__money-money">10000</div>
+        </div>
+        <div class="modal__contact">
+            <!-- Placeholder for product information -->
+        </div>
+    </div>
+    <div class="contact">
+        <div class="product-img">
+            <img src="/z4922076410312_67d1553ff805b45092f79186c6932814.jpg" alt=""
+                onmouseover="showProductInfo('Dell 3410', '2237192', 'RAM 8GB SSD 512GB')"
+                onmousemove="updatePosition(event)" onmouseleave="hideProductInfo()">
+        </div>
+
+        <div class="contact__money">
+            <div class="contact__money-name">dell 7410</div>
+            <div class="contact__money-money">10000</div>
+        </div>
+        <div class="modal__contact">
+            <!-- Placeholder for product information -->
+        </div>
+    </div>
+
+
+    <script>
+        function showProductInfo(name, price, details) {
+            const modal = document.querySelector(".modal__contact");
+            modal.innerHTML = `<div class = "name_contact">${name}</div><div class="money_contact">${price}</div><div>${details}</div>`;
+            modal.style.display = "block";
+        }
+
+        function updatePosition(event) {
+            const modal = document.querySelector(".modal__contact");
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            modal.style.left = mouseX + 20 + "px";
+            modal.style.top = mouseY + 20 + "px"; 
+        }
+
+        function hideProductInfo() {
+            const modal = document.querySelector(".modal__contact");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

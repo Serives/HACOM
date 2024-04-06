@@ -1,0 +1,37 @@
+{
+  "laptop": [
+    {
+      "id": "2",
+      "img": "/z4922076407629_15029fefa4475c2df2c74a92465f1be0.jpg",
+      "name": "Laptop Dell Presion 5541",
+      "cpu": "i7-9870HQ",
+      "ram": "16G DDR4",
+      "disk": "1000GB",
+      "desktop": "15.6 FHD",
+      "price": "13900000đ",
+      "discount": "135000000đ"
+    },
+    {
+      "id": "4",
+      "img": "/z4922076407629_15029fefa4475c2df2c74a92465f1be0.jpg",
+      "name": "Laptop Dell Presion 5542",
+      "cpu": "i7-9870HQ",
+      "ram": "16G DDR4",
+      "disk": "1000GB",
+      "desktop": "15.6 FHD",
+      "price": "13900000đ",
+      "discount": "135000000đ"
+    },
+    {
+      "id": "1",
+      "img": "/z4922076407629_15029fefa4475c2df2c74a92465f1be0.jpg",
+      "name": "7530",
+      "cpu": "i7",
+      "ram": "8g",
+      "disk": "256g",
+      "desktop": "15.6",
+      "price": "1000000",
+      "discount": "1000000"
+    }
+  ]
+}

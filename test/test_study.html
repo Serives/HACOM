@@ -1,0 +1,152 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+</body>
+<script>
+  // function User(FirstName, LastName, Avatar){
+  //     this.FirstName = FirstName;
+  //     this.LastName = LastName;
+  //     this.Avatar = Avatar;
+  // }
+  // var author = new User('Nguyễn', 'Công', 'Avatar');
+  // var user = new User('Nguyễn', 'Chí', 'Avatar');
+  // document.getElementById('demo').innerHTML = author;
+  // document.getElementById('demo2').innerHTML = user;
+  // console.log(author);
+  // console.log(user);
+    
+ 
+// Expected results:
+
+</script>
+<script>
+  // var arr = [
+  //     {
+  //         id: 1,
+  //         name: 'Công',
+  //         age: 18,
+  //         address: 'Hà Nội',
+  //     },
+  //     {
+  //         id: 2,
+  //         name: 'Chí',
+  //         age: 20,
+  //         address: 'Hà Tây',
+  //     },
+  //     {
+  //         id: 3,
+  //         name: 'Nguyễn',
+  //         age: 22,
+  //         address: 'Quảng Ninh',
+  //     },
+  //     {
+  //         id: 4,
+  //         name: 'Nguyễn Chí',
+  //         age: 20,
+  //         address: 'Hà Tây',
+  //     },
+  //     {
+  //         id: 5,
+  //         name: 'Chí Công',
+  //         age: 19,
+  //         address: 'Tây',
+  //     },
+  // ]
+  // arr.forEach(
+  //     function (course, index) {
+  //         console.log(index, course);
+  //     }
+  // );
+
+  // var isFree = arr.every(
+  //     function (course, i, a) {
+  //         console.log(i)
+  //         console.log(a);
+  //         return course.age === 20;
+  //     }
+  // )
+  // console.log(isFree)
+
+
+  // var IsFree = arr.some(
+  //     function (course, i, a) {
+  //         console.log(i)
+  //         console.log(a);
+  //         return course.age === 20;
+  //     }
+  // )
+  // console.log(IsFree)
+
+
+  // var filter = arr.filter(function (course,index){
+  //     return course.address === 'Hà Tây';
+  // })
+  // console.log(filter);  
+
+  // function courseHand(cours){
+  //     return {
+  //     id : arr.id,
+  //     name : `HỌ TÊN : ${cours.name}`,
+  //     age : `Tuổi : ${cours.age}`,
+  //     address : `Địa chỉ : ${cours.address}`,
+  //     };
+  // } 
+  // var newArr = arr.map(courseHand);
+  // console.log(newArr);
+
+  /*
+  Array.prototype.reduce1 = function (c, d) {
+    console.log(c);
+    console.log(d);
+  
+    for (let i = 0; i < this.length; i++) {
+      d = c(d, this[i]);
+    }
+    return d;
+  }
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let arr1 = [1, 2, 33, 4, 54, 6, 7, 8, 9];
+
+  let sum = arr.reduce1((a, b) => {
+    return a + b;
+  }, 10);
+  console.log(sum);
+  
+  */
+
+
+  /*
+  Array.prototype.reduce1 = function(item,iteam){ 
+  for(let i = 0;i<this.length;i++){
+    iteam = item(iteam,this[i]);
+  }
+  return iteam;
+};
+
+let arr=[1,2,3,4,5,6,7,8,9,654,4564,24];
+let arrayOut = arr.reduce1((a,b)=>{
+  return a + b;
+},0);
+console.log(arrayOut);
+*/
+Array.prototype.map2=function(cours){
+  let mylength = this.length;
+  for(let i = 0 ;i<mylength ;i++){
+    cours(this[i],i);
+  }
+}
+let arr = ['hello','Hi','123'];
+arr.map2(function(cours,index){
+  console.log(index +":" +cours);
+});
+</script>
+
+</html>

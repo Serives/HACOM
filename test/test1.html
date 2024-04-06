@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng quay may mắn</title>
+    <style>
+        #canvas {
+            margin: 50px auto;
+        }
+        #spin {
+            width: 100px;
+            height: 30px;
+            background-color: #000;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <button id="spin">QUAY</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wheel/1.5.1/Winwheel.min.js"></script>
+    <script>
+        var theWheel = new Winwheel({
+            'numSegments': 10, // Số lượng phần
+            'outerRadius': 200, // Bán kính bên ngoài
+            'textFontSize': 16, // Kích thước chữ
+            'segments': [ // Các phần thưởng
+                { 'fillStyle': '#eae56f', 'text': 'Phần thưởng 1' },
+                { 'fillStyle': '#89f26e', 'text': 'Phần thưởng 2' },
+                { 'fillStyle': '#7de6ef', 'text': 'Phần thưởng 3' },
+                // Thêm các phần thưởng khác
+            ],
+            'animation': {
+                'type': 'spinToStop',
+                'duration': 5,
+                'spins': 8,
+                'callbackFinished': alertPrize
+            }
+        });
+
+        document.getElementById('spin').addEventListener('click', spinWheel);
+
+        function spinWheel() {
+            theWheel.startAnimation();
+        }
+
+        function alertPrize(indicatedSegment) {
+            alert('Chúc mừng! Bạn đã trúng ' + indicatedSegment.text);
+        }
+    </script>
+</body>
+</html>
